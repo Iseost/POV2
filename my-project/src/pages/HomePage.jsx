@@ -2,6 +2,10 @@ import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import imageOfMe from "../assets/me.png";
 import placeholderImage from "../assets/image.png";
+import auctionHouseImage from "../assets/auctionHouse.png";
+import brightCartImage from "../assets/brightCart.png";
+import mmfImage from "../assets/mmf.png";
+import mortogise from "../assets/mortogise.png";
 
 function ProjectCard({ id, title, image, description }) {
   const smallerSentence = (text) => {
@@ -18,12 +22,12 @@ function ProjectCard({ id, title, image, description }) {
 
   return (
     <Link to={`/project/${id}`}>
-      <div className="flex flex-col rounded-xl bg-white shadow-md transition-all duration-300 transform hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] cursor-pointer overflow-hidden w-full min-h-[420px] sm:min-h-[450px] md:min-h-[480px]">
+      <div className="flex flex-col rounded-xl bg-white/90 shadow-md transition-all duration-300 transform hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] cursor-pointer overflow-hidden w-full min-h-[450px] sm:min-h-[450px] md:min-h-[480px]">
         <div className="flex items-center justify-center w-full h-40 sm:h-48 md:h-56 overflow-hidden shrink-0">
           <img
             src={image || placeholderImage}
             alt={title}
-            className="object-cover w-full h-full hover:scale-110 transition-transform duration-300"
+            className="object-cover object-top w-full h-full"
             onError={(e) => {
               e.target.onerror = null;
               e.target.src = placeholderImage;
@@ -52,14 +56,14 @@ export default function HomePage() {
     {
       id: 1,
       title: "Auction House",
-      image: placeholderImage,
+      image: auctionHouseImage || placeholderImage,
       description: "Semester project 2",
       category: "school",
     },
     {
       id: 2,
       title: "BrightCart",
-      image: placeholderImage,
+      image: brightCartImage || placeholderImage,
       description: "Assignment for JavaScript frameworks course.",
       category: "school",
     },
@@ -73,7 +77,7 @@ export default function HomePage() {
     {
       id: 4,
       title: "MMF - musikkforandrerliv",
-      image: placeholderImage,
+      image: mmfImage || placeholderImage,
       description:
         "This project was a collaborative effort between all Frontend Development students at Noroff. ",
       category: "school",
@@ -81,7 +85,7 @@ export default function HomePage() {
     {
       id: 5,
       title: "Morten + Iselin",
-      image: placeholderImage,
+      image: mortogise || placeholderImage,
       description:
         "A personal hobby project where I designed and built a wedding invitation website for my own wedding.",
       category: "private",
