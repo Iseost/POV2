@@ -51,44 +51,39 @@ export default function HomePage() {
   const projects = [
     {
       id: 1,
-      title: "Project One",
+      title: "Auction House",
       image: placeholderImage,
-      description: "This is a description of project one.",
+      description: "Semester project 2",
       category: "school",
     },
     {
       id: 2,
-      title: "Project Two",
+      title: "BrightCart",
       image: placeholderImage,
-      description: "This is a description of project two.",
-      category: "private",
+      description: "Assignment for JavaScript frameworks course.",
+      category: "school",
     },
     {
       id: 3,
-      title: "Project Three",
+      title: "CSS frameworks",
       image: placeholderImage,
       description: "This is a description of project three.",
       category: "school",
     },
     {
       id: 4,
-      title: "Project Four",
+      title: "MMF - musikkforandrerliv",
       image: placeholderImage,
-      description: "This is a description of project four.",
-      category: "private",
-    },
-    {
-      id: 5,
-      title: "Project Five",
-      image: placeholderImage,
-      description: "This is a description of project five.",
+      description:
+        "This project was a collaborative effort between all Frontend Development students at Noroff. ",
       category: "school",
     },
     {
-      id: 6,
-      title: "Project Six",
+      id: 5,
+      title: "Morten + Iselin",
       image: placeholderImage,
-      description: "This is a description of project six.",
+      description:
+        "A personal hobby project where I designed and built a wedding invitation website for my own wedding.",
       category: "private",
     },
   ];
