@@ -4,10 +4,10 @@ import Footer from "./Footer.jsx";
 
 export default function Layout() {
   return (
-    <div className="flex flex-col min-h-screen text-[var(--text-body)]">
+    <div className="flex flex-col min-h-screen">
       <Header />
 
-      <main className="flex-1 ">
+      <main className="flex-1">
         <Outlet />
       </main>
 

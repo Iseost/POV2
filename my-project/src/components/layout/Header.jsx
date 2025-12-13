@@ -10,7 +10,7 @@ import placeholderImage from "../../assets/image.png";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <header className="shadow-md">
+    <header className="shadow-md bg-[#F5F1EA]">
       <div className="container mx-auto flex items-center justify-between p-4">
         <Link to="/">
           <img src={placeholderImage} alt="Logo" className="h-8 w-auto" />
