@@ -17,7 +17,7 @@ export default function ProjectCard({ title, image, description }) {
   };
 
   return (
-    <div className="flex flex-col rounded-xl bg-(--bg-header) shadow-md transition-all duration-300 transform hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] cursor-pointer overflow-hidden w-full min-h-[420px] sm:min-h-[450px] md:min-h-[480px]">
+    <div className="flex flex-col rounded-xl shadow-md transition-all duration-300 transform hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] cursor-pointer overflow-hidden w-full min-h-[420px] sm:min-h-[450px] md:min-h-[480px]">
       <div className="flex items-center justify-center w-full h-40 sm:h-48 md:h-56 overflow-hidden shrink-0">
         <img
           src={image || "https://via.placeholder.com/400x200?text=No+Image"}

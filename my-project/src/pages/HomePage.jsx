@@ -151,7 +151,11 @@ export default function HomePage() {
       </div>
 
       {/* Projects */}
-      <div ref={projectsRef} className="container mx-auto px-4 py-20">
+      <div
+        ref={projectsRef}
+        id="projects"
+        className="container mx-auto px-4 py-20"
+      >
         <h1 className="text-3xl md:text-4xl font-bold text-center mb-4">
           My Projects
         </h1>
@@ -190,6 +194,7 @@ export default function HomePage() {
       {/* About */}
       <section
         ref={aboutRef}
+        id="about"
         className="mx-auto px-4 py-20 bg-[#F3EADF] rounded-xl shadow-md"
       >
         <div className="flex flex-col lg:flex-row items-center gap-12 mb-12">

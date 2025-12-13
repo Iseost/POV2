@@ -9,6 +9,15 @@ import placeholderImage from "../../assets/image.png";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Smooth scroll to section by id
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <header className="shadow-md bg-[#F5F1EA]">
       <div className="container mx-auto flex items-center justify-between p-4">
@@ -16,6 +25,7 @@ export default function Header() {
           <img src={placeholderImage} alt="Logo" className="h-8 w-auto" />
         </Link>
         <nav>
+          {/* Desktop menu */}
           <ul className="hidden md:flex space-x-6">
             <li>
               <Link to="/" className="transition-colors duration-300">
@@ -23,9 +33,20 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link to="/about" className="transition-colors duration-300">
+              <button
+                onClick={() => scrollToSection("projects")}
+                className="transition-colors duration-300"
+              >
+                Projects
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => scrollToSection("about")}
+                className="transition-colors duration-300"
+              >
                 About
-              </Link>
+              </button>
             </li>
             <li>
               <Link to="/contact" className="transition-colors duration-300">
@@ -33,6 +54,8 @@ export default function Header() {
               </Link>
             </li>
           </ul>
+
+          {/* Mobile menu */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -65,6 +88,8 @@ export default function Header() {
           </div>
         </nav>
       </div>
+
+      {/* Mobile dropdown */}
       {isMenuOpen && (
         <div className="md:hidden shadow-md">
           <ul className="flex flex-col space-y-4 p-4">
@@ -78,13 +103,26 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link
-                to="/about"
+              <button
+                onClick={() => {
+                  scrollToSection("projects");
+                  setIsMenuOpen(false);
+                }}
                 className="transition-colors duration-300"
-                onClick={() => setIsMenuOpen(false)}
+              >
+                Projects
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => {
+                  scrollToSection("about");
+                  setIsMenuOpen(false);
+                }}
+                className="transition-colors duration-300"
               >
                 About
-              </Link>
+              </button>
             </li>
             <li>
               <Link
