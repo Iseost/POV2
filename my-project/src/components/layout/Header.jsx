@@ -35,7 +35,7 @@ export default function Header() {
             <li>
               <button
                 onClick={() => scrollToSection("projects")}
-                className="transition-colors duration-300"
+                className="transition-colors duration-300 cursor-pointer"
               >
                 Projects
               </button>
@@ -43,15 +43,10 @@ export default function Header() {
             <li>
               <button
                 onClick={() => scrollToSection("about")}
-                className="transition-colors duration-300"
+                className="transition-colors duration-300 cursor-pointer"
               >
                 About
               </button>
-            </li>
-            <li>
-              <Link to="/contact" className="transition-colors duration-300">
-                Contact
-              </Link>
             </li>
           </ul>
 
@@ -108,7 +103,7 @@ export default function Header() {
                   scrollToSection("projects");
                   setIsMenuOpen(false);
                 }}
-                className="transition-colors duration-300"
+                className="transition-colors duration-300 cursor-pointer"
               >
                 Projects
               </button>
@@ -119,19 +114,10 @@ export default function Header() {
                   scrollToSection("about");
                   setIsMenuOpen(false);
                 }}
-                className="transition-colors duration-300"
+                className="transition-colors duration-300 cursor-pointer"
               >
                 About
               </button>
-            </li>
-            <li>
-              <Link
-                to="/contact"
-                className="transition-colors duration-300"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Contact
-              </Link>
             </li>
           </ul>
         </div>
