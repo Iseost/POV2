@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import imageOfMe from "../assets/me.png";
 import placeholderImage from "../assets/image.png";
@@ -56,19 +56,6 @@ export default function HomePage() {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [showBackToTop, setShowBackToTop] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowBackToTop(window.scrollY > 300);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   const projects = [
     {
       id: 1,
@@ -113,6 +100,44 @@ export default function HomePage() {
     selectedCategory === "all"
       ? projects
       : projects.filter((project) => project.category === selectedCategory);
+
+  // Show/hide back to top button based on scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowBackToTop(window.scrollY > 300);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Restore scroll position when returning to this page
+  useEffect(() => {
+    const savedScrollPosition = sessionStorage.getItem("homeScrollPosition");
+    if (savedScrollPosition) {
+      window.scrollTo(0, parseInt(savedScrollPosition));
+      sessionStorage.removeItem("homeScrollPosition");
+    }
+  }, []);
+
+  // Save scroll position before leaving the page
+  useEffect(() => {
+    const saveScrollPosition = () => {
+      sessionStorage.setItem("homeScrollPosition", window.scrollY.toString());
+    };
+
+    // Listen for when links are clicked
+    const links = document.querySelectorAll('a[href^="/project/"]');
+    links.forEach((link) => {
+      link.addEventListener("click", saveScrollPosition);
+    });
+
+    return () => {
+      links.forEach((link) => {
+        link.removeEventListener("click", saveScrollPosition);
+      });
+    };
+  }, [filteredProjects]);
 
   const funFacts = [
     "Tolkien ❤️",
@@ -172,7 +197,7 @@ export default function HomePage() {
         id="projects"
         className="container mx-auto px-4 py-20"
       >
-        <h1 className="text-3xl md:text-4xl font-bold text-center mb-4">
+        <h1 className="text-3xl md:text-4xl font-bold text-center mb-6">
           My Projects
         </h1>
         <p className="text-center text-[#6B5A4E] mb-8 max-w-2xl mx-auto">
@@ -180,7 +205,10 @@ export default function HomePage() {
         </p>
 
         {/* Buttons */}
-        <div className="flex justify-center gap-4 mb-12">
+        <div
+          className="flex justify-center gap-4 mb-20
+        "
+        >
           {["all", "school", "private"].map((cat) => (
             <button
               key={cat}
@@ -254,10 +282,11 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
       {/* Back to Top Button */}
       {showBackToTop && (
         <button
-          onClick={scrollToTop}
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="fixed bottom-8 right-8 bg-[#7B513A] text-white p-4 rounded-full shadow-lg hover:bg-[#5A3A2A] transition-all duration-300 hover:scale-110 z-50"
           aria-label="Back to top"
         >
