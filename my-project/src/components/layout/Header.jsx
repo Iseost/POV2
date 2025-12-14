@@ -5,7 +5,7 @@
 // hamburger menu for mobile view
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import placeholderImage from "../../assets/image.png";
+import logoImage from "../../assets/logoiselin.png";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,23 +19,30 @@ export default function Header() {
   };
 
   return (
-    <header className="shadow-md bg-[#F5F1EA]">
-      <div className="container mx-auto flex items-center justify-between p-4">
+    <header className="shadow-md bg-white relative z-10 h-30">
+      <div className="container mx-auto flex items-end justify-between p-4 pb-6">
         <Link to="/">
-          <img src={placeholderImage} alt="Logo" className="h-8 w-auto" />
+          <img
+            src={logoImage}
+            alt="Logo"
+            className="h-40 w-auto absolute rounded-full top-2 left-18"
+          />
         </Link>
-        <nav>
+        <nav className="p-18">
           {/* Desktop menu */}
           <ul className="hidden md:flex space-x-6">
             <li>
-              <Link to="/" className="transition-colors duration-300">
+              <Link
+                to="/"
+                className="text-[#3A2A20] hover:text-[#7B513A] transition-colors duration-300 cursor-pointer font-bold"
+              >
                 Home
               </Link>
             </li>
             <li>
               <button
                 onClick={() => scrollToSection("projects")}
-                className="transition-colors duration-300 cursor-pointer"
+                className="text-[#3A2A20] hover:text-[#7B513A] transition-colors duration-300 cursor-pointer font-bold"
               >
                 Projects
               </button>
@@ -43,7 +50,7 @@ export default function Header() {
             <li>
               <button
                 onClick={() => scrollToSection("about")}
-                className="transition-colors duration-300 cursor-pointer"
+                className="text-[#3A2A20] hover:text-[#7B513A] transition-colors duration-300 cursor-pointer font-bold"
               >
                 About
               </button>
@@ -86,12 +93,12 @@ export default function Header() {
 
       {/* Mobile dropdown */}
       {isMenuOpen && (
-        <div className="md:hidden shadow-md">
+        <div className="md:hidden shadow-md bg-white rounded-b-lg">
           <ul className="flex flex-col space-y-4 p-4">
             <li>
               <Link
                 to="/"
-                className="transition-colors duration-300"
+                className="text-[#3A2A20] hover:text-[#7B513A] transition-colors duration-300 cursor-pointer font-bold"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
@@ -103,7 +110,7 @@ export default function Header() {
                   scrollToSection("projects");
                   setIsMenuOpen(false);
                 }}
-                className="transition-colors duration-300 cursor-pointer"
+                className="text-[#3A2A20] hover:text-[#7B513A] transition-colors duration-300 cursor-pointer font-bold"
               >
                 Projects
               </button>
@@ -114,7 +121,7 @@ export default function Header() {
                   scrollToSection("about");
                   setIsMenuOpen(false);
                 }}
-                className="transition-colors duration-300 cursor-pointer"
+                className="text-[#3A2A20] hover:text-[#7B513A] transition-colors duration-300 cursor-pointer font-bold"
               >
                 About
               </button>
