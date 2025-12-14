@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import imageOfMe from "../assets/me.png";
 import placeholderImage from "../assets/image.png";
@@ -21,29 +21,32 @@ function ProjectCard({ id, title, image, description }) {
   };
 
   return (
-    <Link to={`/project/${id}`}>
-      <div className="flex flex-col rounded-xl bg-white/90 shadow-md transition-all duration-300 transform hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] cursor-pointer overflow-hidden w-full min-h-[450px] sm:min-h-[450px] md:min-h-[480px]">
-        <div className="flex items-center justify-center w-full h-40 sm:h-48 md:h-56 overflow-hidden shrink-0">
-          <img
-            src={image || placeholderImage}
-            alt={title}
-            className="object-cover object-top w-full h-full"
-            onError={(e) => {
-              e.target.onerror = null;
-              e.target.src = placeholderImage;
-            }}
-          />
-        </div>
-        <div className="p-4 flex flex-col grow">
-          <h2 className="text-base md:text-2xl font-bold mb-2 text-[#3A2A20]">
-            {title}
-          </h2>
-          <p className="text-xs sm:text-sm pb-3 pt-3 text-[#6B5A4E] grow">
-            {smallerSentence(description)}
-          </p>
-        </div>
+    <div className="flex flex-col rounded-xl bg-white/90 shadow-md transition-all duration-300 transform hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] overflow-hidden w-full min-h-[350px] sm:min-h-[360px] md:min-h-[380px]">
+      <div className="flex items-center justify-center w-full h-40 sm:h-48 md:h-56 overflow-hidden shrink-0">
+        <img
+          src={image || placeholderImage}
+          alt={title}
+          className="object-cover object-top w-full h-full"
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = placeholderImage;
+          }}
+        />
       </div>
-    </Link>
+      <div className="p-4 flex flex-col grow">
+        <h2 className="text-base md:text-2xl font-bold mb-2 text-[#3A2A20]">
+          {title}
+        </h2>
+        <p className="text-xs sm:text-sm pb-3 pt-3 text-[#6B5A4E] grow">
+          {smallerSentence(description)}
+        </p>
+        <Link to={`/project/${id}`} className="mt-auto">
+          <button className="w-full px-6 py-2 bg-[#7B513A] text-white font-semibold rounded-lg hover:bg-[#5A3A2A] transition-colors duration-300">
+            Read More
+          </button>
+        </Link>
+      </div>
+    </div>
   );
 }
 
@@ -51,6 +54,20 @@ export default function HomePage() {
   const projectsRef = useRef(null);
   const aboutRef = useRef(null);
   const [selectedCategory, setSelectedCategory] = useState("all");
+  const [showBackToTop, setShowBackToTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowBackToTop(window.scrollY > 300);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const projects = [
     {
@@ -237,6 +254,29 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* Back to Top Button */}
+      {showBackToTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 bg-[#7B513A] text-white p-4 rounded-full shadow-lg hover:bg-[#5A3A2A] transition-all duration-300 hover:scale-110 z-50"
+          aria-label="Back to top"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M5 10l7-7m0 0l7 7m-7-7v18"
+            />
+          </svg>
+        </button>
+      )}
     </div>
   );
 }
