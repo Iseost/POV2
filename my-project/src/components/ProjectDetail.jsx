@@ -14,122 +14,66 @@ export default function ProjectDetail() {
       id: 1,
       title: "Auction House",
       image: auctionHouseImage,
+      subtitle: "Semester project 2",
       category: "school",
       description:
-        "A full-featured auction house platform built as a semester project. This application allows users to create auctions, place bids, and manage their listings in real-time.",
-      longDescription:
-        "The Auction House project was developed as part of my second semester at Noroff. It showcases a complete e-commerce auction system where users can register, create listings, bid on items, and track their auction activity. The platform includes user authentication, real-time bid updates, and a responsive design that works seamlessly across all devices.",
+        "A full-featured auction house platform built as a semester project. This application allows users to create auctions, place bids, and manage their listings in real-time. The Auction House project was developed as part of my second semester at Noroff. It showcases a complete e-commerce auction system where users can register, create listings, bid on items, and track their auction activity.",
       technologies: ["React", "JavaScript", "Tailwind CSS", "API Integration"],
-      features: [
-        "User authentication and profile management",
-        "Create and manage auction listings",
-        "Real-time bidding system",
-        "Search and filter functionality",
-        "Responsive design for all devices",
-      ],
-      challenges:
-        "One of the main challenges was implementing real-time bid updates and ensuring data consistency across multiple users. I also focused on creating an intuitive user experience for the bidding process.",
-      learnings:
-        "This project taught me a lot about state management in React, working with APIs, and handling real-time data updates. I also improved my skills in designing user-friendly interfaces for complex interactions.",
       githubLink: "https://github.com/yourusername/auction-house",
       liveLink: "https://auction-house-demo.netlify.app",
+      images: [auctionHouseImage, placeholderImage, placeholderImage],
     },
     2: {
       id: 2,
       title: "BrightCart",
       image: brightCartImage,
+      subtitle: "JavaScript Frameworks Course",
       category: "school",
       description:
-        "An e-commerce shopping cart application developed for the JavaScript Frameworks course.",
-      longDescription:
-        "BrightCart is a modern e-commerce application that demonstrates proficiency in React and state management. The application features a clean, intuitive interface for browsing products, adding items to cart, and completing purchases. Built with performance and user experience in mind.",
+        "An e-commerce shopping cart application developed for the JavaScript Frameworks course. BrightCart is a modern e-commerce application that demonstrates proficiency in React and state management. The application features a clean, intuitive interface for browsing products, adding items to cart, and completing purchases.",
       technologies: ["React", "JavaScript", "CSS Modules", "Context API"],
-      features: [
-        "Product browsing and filtering",
-        "Shopping cart functionality",
-        "Checkout process",
-        "Product search",
-        "Responsive design",
-      ],
-      challenges:
-        "Managing cart state across multiple components and implementing smooth animations for cart interactions were key challenges that helped me grow as a developer.",
-      learnings:
-        "I gained deeper understanding of React Context API, custom hooks, and component composition patterns. This project also improved my CSS skills for creating smooth user interactions.",
       githubLink: "https://github.com/yourusername/brightcart",
       liveLink: "https://brightcart-demo.netlify.app",
+      images: [brightCartImage, placeholderImage, placeholderImage],
     },
     3: {
       id: 3,
       title: "CSS Frameworks",
       image: placeholderImage,
+      subtitle: "Framework exploration project",
       category: "school",
       description:
-        "A project exploring various CSS frameworks and modern styling approaches.",
-      longDescription:
-        "This project was an exploration of different CSS frameworks including Bootstrap, Tailwind CSS, and CSS-in-JS solutions. The goal was to understand the strengths and use cases of each approach and develop proficiency in modern styling techniques.",
+        "A project exploring various CSS frameworks and modern styling approaches. This project was an exploration of different CSS frameworks including Bootstrap, Tailwind CSS, and CSS-in-JS solutions. The goal was to understand the strengths and use cases of each approach.",
       technologies: ["HTML", "CSS", "Bootstrap", "Tailwind CSS", "Sass"],
-      features: [
-        "Responsive layouts",
-        "Component library",
-        "Custom theme implementation",
-        "Utility-first CSS approach",
-        "Cross-browser compatibility",
-      ],
-      challenges:
-        "Understanding the trade-offs between different frameworks and deciding when to use each approach was a valuable learning experience.",
-      learnings:
-        "I developed a strong foundation in CSS frameworks and learned to choose the right tool for specific project requirements. This knowledge has been invaluable in all my subsequent projects.",
       githubLink: "https://github.com/yourusername/css-frameworks",
       liveLink: "https://css-frameworks-demo.netlify.app",
+      images: [placeholderImage, placeholderImage, placeholderImage],
     },
     4: {
       id: 4,
       title: "MMF - musikkforandrerliv",
       image: mmfImage,
+      subtitle: "Collaborative team project",
       category: "school",
       description:
-        "A collaborative project with all Frontend Development students at Noroff.",
-      longDescription:
-        "MMF (Musikk Forandrer Liv - Music Changes Lives) was a large-scale collaborative project involving all frontend development students at Noroff. The project aimed to create a platform showcasing how music impacts lives and brings communities together. Working in a team environment taught me valuable lessons about code collaboration, version control, and communication.",
+        "A collaborative project with all Frontend Development students at Noroff. MMF (Musikk Forandrer Liv - Music Changes Lives) was a large-scale collaborative project involving all frontend development students. The project aimed to create a platform showcasing how music impacts lives and brings communities together.",
       technologies: ["React", "JavaScript", "Tailwind CSS", "Git", "Figma"],
-      features: [
-        "Collaborative team development",
-        "Component-based architecture",
-        "Responsive design system",
-        "Git workflow with multiple contributors",
-        "Design system implementation",
-      ],
-      challenges:
-        "Coordinating with a large team, managing merge conflicts, and maintaining code consistency across multiple developers were significant challenges that taught me professional development practices.",
-      learnings:
-        "This project was invaluable for learning team collaboration, professional Git workflows, code reviews, and effective communication in a development team. I also learned how to work with design systems and maintain code quality in a collaborative environment.",
       githubLink: "https://github.com/noroff/mmf",
       liveLink: "https://mmf-project.netlify.app",
+      images: [mmfImage, placeholderImage, placeholderImage],
     },
     5: {
       id: 5,
       title: "Morten + Iselin",
       image: mortogise,
+      subtitle: "The wedding invitation",
       category: "private",
       description:
-        "A personal wedding invitation website designed and built for my own wedding.",
-      longDescription:
-        "This was a special personal project where I designed and developed a custom wedding invitation website. The site features interactive elements, RSVP functionality, and all the information guests needed for our wedding day. It was a joy to combine my technical skills with such a meaningful personal event.",
+        "A personal hobby project where I designed and built a wedding invitation website for my own wedding. This was a special personal project where I designed and developed a custom wedding invitation website. The site features interactive elements, RSVP functionality, and all the information guests needed for our wedding day.",
       technologies: ["React", "JavaScript", "CSS", "Responsive Design"],
-      features: [
-        "Interactive invitation design",
-        "RSVP system",
-        "Event details and timeline",
-        "Photo gallery",
-        "Mobile-first responsive design",
-        "Custom animations and interactions",
-      ],
-      challenges:
-        "Balancing creative design with functionality while ensuring the site worked perfectly for all our guests across different devices and browsers.",
-      learnings:
-        "This project allowed me to explore creative web design and animations while building something deeply personal. It reinforced the importance of user testing with real users (our wedding guests!) and taught me to think about accessibility and usability from a personal perspective.",
       githubLink: "https://github.com/yourusername/wedding-site",
       liveLink: "https://mortenogiselin.no",
+      images: [mortogise, placeholderImage, placeholderImage],
     },
   };
 
@@ -137,21 +81,34 @@ export default function ProjectDetail() {
 
   if (!project) {
     return (
-      <div>
-        <div>
-          <h1>Project Not Found</h1>
-          <p>The project you're looking for doesn't exist.</p>
-          <Link to="/">Back to Home</Link>
+      <div className="min-h-screen bg-[#FAF7F3] flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-[#3A2A20] mb-4">
+            Project Not Found
+          </h1>
+          <p className="text-[#6B5A4E] mb-8">
+            The project you're looking for doesn't exist.
+          </p>
+          <Link
+            to="/"
+            className="px-6 py-3 bg-[#7B513A] text-white font-semibold rounded-lg hover:bg-[#5A3A2A] transition-colors"
+          >
+            Back to Home
+          </Link>
         </div>
       </div>
     );
   }
 
   return (
-    <div>
-      <div>
-        <div>
-          <Link to="/">
+    <div className="min-h-screen bg-[#FAF7F3]">
+      {/* Hero Image Section */}
+      <div className="bg-[#E8E0D5] py-12">
+        <div className="container mx-auto px-4">
+          <Link
+            to="/"
+            className="inline-flex items-center text-[#7B513A] hover:text-[#5A3A2A] transition-colors mb-6"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5 mr-2"
@@ -166,77 +123,59 @@ export default function ProjectDetail() {
             </svg>
             Back to Projects
           </Link>
-          <h1>{project.title}</h1>
-          <p>{project.description}</p>
-        </div>
-      </div>
-      <div>
-        <div>
-          <img
-            src={project.image || placeholderImage}
-            alt={project.title}
-            onError={(e) => {
-              e.target.onerror = null;
-              e.target.src = placeholderImage;
-            }}
-          />
-        </div>
-      </div>
-      <div>
-        <div>
-          <div>
-            <section>
-              <h2>Overview</h2>
-              <p>{project.longDescription}</p>
-            </section>
-            <section>
-              <h2>Key Features</h2>
-              <ul>
-                {project.features.map((feature, index) => (
-                  <li key={index}>
-                    <span>✓</span>
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </section>
-            <section>
-              <h2>Challenges</h2>
-              <p>{project.challenges}</p>
-            </section>
-            <section>
-              <h2>What I Learned</h2>
-              <p>{project.learnings}</p>
-            </section>
+
+          <div className="bg-[#FAF7F3] rounded-2xl overflow-hidden max-w-4xl mx-auto aspect-video">
+            <img
+              src={project.image || placeholderImage}
+              alt={project.title}
+              className="w-full h-full object-cover"
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = placeholderImage;
+              }}
+            />
           </div>
-          <div>
+        </div>
+      </div>
+
+      {/* Content Section Below Hero */}
+      <div className="container mx-auto px-4 py-12">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-3xl md:text-4xl font-bold text-[#7B513A] mb-2">
+            {project.title}
+          </h1>
+          <p className="text-lg text-[#6B5A4E] mb-8">{project.subtitle}</p>
+
+          <div className="grid md:grid-cols-2 gap-8 pb-8 border-b border-[#E8E0D5]">
+            {/* Left Column */}
             <div>
-              <h3>Technologies</h3>
-              <div>
+              <h3 className="text-sm font-semibold text-[#7B513A] mb-3">
+                Technologies:
+              </h3>
+              <div className="flex flex-wrap gap-2 mb-6">
                 {project.technologies.map((tech, index) => (
-                  <span key={index}>{tech}</span>
+                  <span
+                    key={index}
+                    className="px-3 py-1 bg-[#E7C098]/40 text-[#7B513A] rounded-full text-sm"
+                  >
+                    {tech}
+                  </span>
                 ))}
               </div>
-            </div>
-            <div>
-              <h3>Category</h3>
-              <span>
-                {project.category === "school"
-                  ? "School Project"
-                  : "Personal Project"}
-              </span>
-            </div>
-            <div>
-              <h3>Links</h3>
-              <div>
+
+              <h3 className="text-sm font-semibold text-[#7B513A] mb-3">
+                Links:
+              </h3>
+              <div className="space-y-2">
                 {project.githubLink && (
                   <a
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-[#7B513A] hover:text-[#5A3A2A] transition-colors text-sm"
                   >
                     <svg
-                      className="w-5 h-5"
+                      className="w-4 h-4"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                     >
@@ -254,9 +193,10 @@ export default function ProjectDetail() {
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-[#7B513A] hover:text-[#5A3A2A] transition-colors text-sm"
                   >
                     <svg
-                      className="w-5 h-5"
+                      className="w-4 h-4"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -273,6 +213,60 @@ export default function ProjectDetail() {
                 )}
               </div>
             </div>
+
+            {/* Right Column - Description */}
+            <div>
+              <h3 className="text-sm font-semibold text-[#7B513A] mb-3">
+                Description
+              </h3>
+              <p className="text-[#6B5A4E] text-sm leading-relaxed">
+                {project.description}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Image Gallery Section */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto">
+          {/* Two images side by side */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div className="bg-[#E8E0D5] rounded-2xl overflow-hidden aspect-square">
+              <img
+                src={project.images[0] || placeholderImage}
+                alt={`${project.title} screenshot 1`}
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = placeholderImage;
+                }}
+              />
+            </div>
+            <div className="bg-[#E8E0D5] rounded-2xl overflow-hidden aspect-square">
+              <img
+                src={project.images[1] || placeholderImage}
+                alt={`${project.title} screenshot 2`}
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = placeholderImage;
+                }}
+              />
+            </div>
+          </div>
+
+          {/* One large image below */}
+          <div className="bg-[#E8E0D5] rounded-2xl overflow-hidden aspect-video">
+            <img
+              src={project.images[2] || placeholderImage}
+              alt={`${project.title} screenshot 3`}
+              className="w-full h-full object-cover"
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = placeholderImage;
+              }}
+            />
           </div>
         </div>
       </div>
