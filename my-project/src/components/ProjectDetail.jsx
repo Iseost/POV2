@@ -1,13 +1,13 @@
 import { useParams, Link } from "react-router-dom";
 import placeholderImage from "../assets/image.png";
-import auctionHouseImage from "../assets/auctionHouse.png";
-import brightCartImage from "../assets/brightCart/brightCart.png";
-import brightCartImage1 from "../assets/brightCart/brightCartCar.png";
-import brightCartImage2 from "../assets/brightCart/brightCartCheckout.png.png";
-import mmfImage from "../assets/mmf.png";
-import mortogise from "../assets/mortenogiselin/mortogise.png";
-import weddingLogo from "../assets/mortenogiselin/Skjermbilde 2025-12-15 030024.png";
-import weddingInfo from "../assets/mortenogiselin/Skjermbilde 2025-12-15 030143.png";
+import { auctionHouseImage } from "../assets/images";
+import {
+  brightCartImage,
+  brightCartImage1,
+  brightCartImage2,
+} from "../assets/images";
+import { mortogise, weddingLogo, weddingInfo } from "../assets/images";
+import { mmfImage } from "../assets/images";
 
 export default function ProjectDetail() {
   const { id } = useParams();

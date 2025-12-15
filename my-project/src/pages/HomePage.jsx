@@ -2,10 +2,10 @@ import { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import imageOfMe from "../assets/imageme.png";
 import placeholderImage from "../assets/image.png";
-import auctionHouseImage from "../assets/auctionHouse.png";
-import brightCartImage from "../assets/brightCart/brightCart.png";
-import mmfImage from "../assets/mmf.png";
-import mortogise from "../assets/mortenogiselin/mortogise.png";
+import { auctionHouseImage } from "../assets/images";
+import { brightCartImage } from "../assets/images";
+import { mmfImage } from "../assets/images";
+import { mortogise } from "../assets/images";
 
 function ProjectCard({ id, title, image, description }) {
   const smallerSentence = (text) => {
