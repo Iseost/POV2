@@ -145,14 +145,19 @@ export default function HomePage() {
   ];
 
   const skills = [
-    "React",
-    "JavaScript",
     "HTML/CSS",
+    "JavaScript",
     "Tailwind",
-    "Git",
+    "Bootstrap",
+    "React",
+    "React Router",
+    "UX/UI",
+    "VS Code",
+    "GitHub",
+    "Figma",
+    "Adobe XD",
     "Responsive Design",
     "API Integration",
-    "UX/UI",
   ];
 
   return (
@@ -255,12 +260,11 @@ export default function HomePage() {
                 experimenting with new solutions, and building things that are
                 both functional and visually satisfying.
               </p>
-              <p className="text-[#6B5A4E] leading-relaxed font-bold">
+              <p className="text-[#6B5A4E] leading-relaxed font-bold mt-6 sm:text-center">
                 When I'm not glued to my screen, this box spills a few fun facts
-                about me →
+                about me
               </p>
             </div>
-
             <div className="flex-1 flex justify-center">
               <div className="bg-[#E7C098] rounded-3xl shadow-xl p-8 max-w-md w-full">
                 <h2 className="text-2xl font-bold text-white mb-6">
