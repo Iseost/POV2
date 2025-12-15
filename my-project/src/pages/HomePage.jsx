@@ -166,10 +166,11 @@ export default function HomePage() {
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 px-4">
           <div className="flex-1 max-w-xl animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
-              Design. Build. Learn. Repeat.
+              Crafting Experiences, One Line at a Time.
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-6">
-              Crafting digital experiences one line of code at a time
+              Daytime coder, nighttime problem solver, always chasing cleaner
+              UI.
             </p>
           </div>
 
@@ -241,30 +242,47 @@ export default function HomePage() {
         id="about"
         className="mx-auto px-4 py-20 bg-[#F3EADF] rounded-xl shadow-md"
       >
-        <div className="flex flex-col lg:flex-row items-center gap-12 mb-12">
-          <div className="flex-1 space-y-4">
-            <h1 className="text-4xl font-bold">Hi everyone,</h1>
-            <h2 className="text-2xl text-[#6B5A4E]">I'm Iselin!</h2>
-            <p className="text-[#6B5A4E] leading-relaxed">
-              I'm a frontend development student in my final semester...
-            </p>
-          </div>
+        <div className="max-w-6xl mx-auto">
+          {" "}
+          {/* Add this wrapper */}
+          <div className="flex flex-col lg:flex-row justify-center items-center gap-8 mb-12">
+            <div className="flex-1">
+              <h1 className="text-4xl font-bold">Hi everyone,</h1>
+              <h2 className="text-2xl text-[#6B5A4E]">I'm Iselin!</h2>
+              <p className="text-[#6B5A4E] leading-relaxed">
+                I'm a frontend developer in the final stretch of my education —
+                just two assignments away from officially graduating this
+                December (so yes, I'm basically done). I spend my days turning
+                ideas into interactive interfaces, and when I finally sleep, I
+                somehow end up dreaming about solutions, layouts, and why that
+                one bug still hasn't fixed itself. I enjoy learning by doing,
+                experimenting with new solutions, and building things that are
+                both functional and visually satisfying.
+              </p>
+              <p className="text-[#6B5A4E] leading-relaxed font-bold">
+                When I'm not glued to my screen, this box spills a few fun facts
+                about me →
+              </p>
+            </div>
 
-          <div className="flex-1 flex justify-center">
-            <div className="bg-[#E7C098] rounded-3xl shadow-xl p-8 max-w-md w-full">
-              <h2 className="text-2xl font-bold text-white mb-6">Fun Facts</h2>
-              <ul className="space-y-3 text-white text-lg">
-                {funFacts.map((fact, index) => (
-                  <li key={index} className="flex items-center gap-2">
-                    <span className="w-2 h-2 bg-white rounded-full" />
-                    {fact}
-                  </li>
-                ))}
-              </ul>
+            <div className="flex-1 flex justify-center">
+              <div className="bg-[#E7C098] rounded-3xl shadow-xl p-8 max-w-md w-full">
+                <h2 className="text-2xl font-bold text-white mb-6">
+                  Fun Facts
+                </h2>
+                <ul className="space-y-3 text-white text-lg">
+                  {funFacts.map((fact, index) => (
+                    <li key={index} className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-white rounded-full" />
+                      {fact}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-
+        </div>{" "}
+        {/* Close wrapper */}
         {/* Skills */}
         <div className="mt-30">
           <h3 className="text-2xl font-bold text-center mb-8">
