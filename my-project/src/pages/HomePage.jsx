@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import imageOfMe from "../assets/me.png";
+import imageOfMe from "../assets/imageme.png";
 import placeholderImage from "../assets/image.png";
 import auctionHouseImage from "../assets/auctionHouse.png";
 import brightCartImage from "../assets/brightCart.png";
@@ -177,7 +177,7 @@ export default function HomePage() {
             <img
               src={imageOfMe}
               alt="Portrait of Iselin, frontend developer"
-              className="w-full h-auto object-cover"
+              className="w-full h-auto object-cover rounded-full"
               style={{
                 WebkitMaskImage:
                   "radial-gradient(ellipse at center, black 60%, transparent 100%)",
