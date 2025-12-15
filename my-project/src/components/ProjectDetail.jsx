@@ -12,9 +12,14 @@ import {
 } from "../assets/images";
 import { mortogise, weddingLogo, weddingInfo } from "../assets/images";
 import { mmfImage, mmfImage1, mmfImage2 } from "../assets/images";
+import { useEffect } from "react";
 
 export default function ProjectDetail() {
   const { id } = useParams();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // Define all your projects with full details
   const projects = {

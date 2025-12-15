@@ -3,18 +3,29 @@
 // logo on left, nav links on right
 // responsive design for mobile and desktop
 // hamburger menu for mobile view
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 import logoImage from "../../assets/logoiselin.png";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  // Smooth scroll to section by id
-  const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+  // Handle navigation to home page sections
+  const handleSectionClick = (sectionId) => {
+    setIsMenuOpen(false);
+
+    // If we're already on the home page, just scroll
+    if (location.pathname === "/") {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // If we're on another page, navigate to home first
+      // Store the section we want to scroll to
+      navigate("/", { state: { scrollTo: sectionId } });
     }
   };
 
@@ -41,7 +52,7 @@ export default function Header() {
             </li>
             <li>
               <button
-                onClick={() => scrollToSection("projects")}
+                onClick={() => handleSectionClick("projects")}
                 className="text-[#3A2A20] hover:text-[#7B513A] transition-colors duration-300 cursor-pointer font-bold"
               >
                 Projects
@@ -49,7 +60,7 @@ export default function Header() {
             </li>
             <li>
               <button
-                onClick={() => scrollToSection("about")}
+                onClick={() => handleSectionClick("about")}
                 className="text-[#3A2A20] hover:text-[#7B513A] transition-colors duration-300 cursor-pointer font-bold"
               >
                 About
@@ -106,10 +117,7 @@ export default function Header() {
             </li>
             <li>
               <button
-                onClick={() => {
-                  scrollToSection("projects");
-                  setIsMenuOpen(false);
-                }}
+                onClick={() => handleSectionClick("projects")}
                 className="text-[#3A2A20] hover:text-[#7B513A] transition-colors duration-300 cursor-pointer font-bold"
               >
                 Projects
@@ -117,10 +125,7 @@ export default function Header() {
             </li>
             <li>
               <button
-                onClick={() => {
-                  scrollToSection("about");
-                  setIsMenuOpen(false);
-                }}
+                onClick={() => handleSectionClick("about")}
                 className="text-[#3A2A20] hover:text-[#7B513A] transition-colors duration-300 cursor-pointer font-bold"
               >
                 About

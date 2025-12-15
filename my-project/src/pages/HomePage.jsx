@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import imageOfMe from "../assets/imageme.png";
 import placeholderImage from "../assets/image.png";
 import { auctionHouseImage } from "../assets/images";
@@ -8,6 +8,13 @@ import { mmfImage } from "../assets/images";
 import { mortogise } from "../assets/images";
 
 function ProjectCard({ id, title, image, description }) {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+    navigate(`/project/${id}`);
+  };
+
   const smallerSentence = (text) => {
     if (!text) return "No description available";
     const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];
@@ -41,7 +48,10 @@ function ProjectCard({ id, title, image, description }) {
           {smallerSentence(description)}
         </p>
         <Link to={`/project/${id}`} className="mt-auto">
-          <button className="w-full px-6 py-2 bg-[#7B513A] text-white font-semibold rounded-lg hover:bg-[#5A3A2A] transition-colors duration-300">
+          <button
+            onClick={handleClick}
+            className="w-full px-6 py-2 bg-[#7B513A] text-white font-semibold rounded-lg hover:bg-[#5A3A2A] transition-colors duration-300"
+          >
             Read More
           </button>
         </Link>
@@ -55,6 +65,20 @@ export default function HomePage() {
   const aboutRef = useRef(null);
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [showBackToTop, setShowBackToTop] = useState(false);
+  const location = useLocation();
+
+  // Handle scrolling to section when navigating from another page
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      // Small delay to ensure the page has rendered
+      setTimeout(() => {
+        const section = document.getElementById(location.state.scrollTo);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
+  }, [location]);
 
   const projects = [
     {
@@ -110,34 +134,6 @@ export default function HomePage() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  // Restore scroll position when returning to this page
-  useEffect(() => {
-    const savedScrollPosition = sessionStorage.getItem("homeScrollPosition");
-    if (savedScrollPosition) {
-      window.scrollTo(0, parseInt(savedScrollPosition));
-      sessionStorage.removeItem("homeScrollPosition");
-    }
-  }, []);
-
-  // Save scroll position before leaving the page
-  useEffect(() => {
-    const saveScrollPosition = () => {
-      sessionStorage.setItem("homeScrollPosition", window.scrollY.toString());
-    };
-
-    // Listen for when links are clicked
-    const links = document.querySelectorAll('a[href^="/project/"]');
-    links.forEach((link) => {
-      link.addEventListener("click", saveScrollPosition);
-    });
-
-    return () => {
-      links.forEach((link) => {
-        link.removeEventListener("click", saveScrollPosition);
-      });
-    };
-  }, [filteredProjects]);
 
   const funFacts = [
     "Tolkien ❤️",
