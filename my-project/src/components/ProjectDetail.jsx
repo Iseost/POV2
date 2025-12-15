@@ -1,9 +1,13 @@
 import { useParams, Link } from "react-router-dom";
 import placeholderImage from "../assets/image.png";
 import auctionHouseImage from "../assets/auctionHouse.png";
-import brightCartImage from "../assets/brightCart.png";
+import brightCartImage from "../assets/brightCart/brightCart.png";
+import brightCartImage1 from "../assets/brightCart/brightCartCar.png";
+import brightCartImage2 from "../assets/brightCart/brightCartCheckout.png.png";
 import mmfImage from "../assets/mmf.png";
-import mortogise from "../assets/mortogise.png";
+import mortogise from "../assets/mortenogiselin/mortogise.png";
+import weddingLogo from "../assets/mortenogiselin/Skjermbilde 2025-12-15 030024.png";
+import weddingInfo from "../assets/mortenogiselin/Skjermbilde 2025-12-15 030143.png";
 
 export default function ProjectDetail() {
   const { id } = useParams();
@@ -30,11 +34,11 @@ export default function ProjectDetail() {
       subtitle: "JavaScript Frameworks Course",
       category: "school",
       description:
-        "An e-commerce shopping cart application developed for the JavaScript Frameworks course. BrightCart is a modern e-commerce application that demonstrates proficiency in React and state management. The application features a clean, intuitive interface for browsing products, adding items to cart, and completing purchases.",
-      technologies: ["React", "JavaScript", "CSS Modules", "Context API"],
-      githubLink: "https://github.com/yourusername/brightcart",
-      liveLink: "https://brightcart-demo.netlify.app",
-      images: [brightCartImage, placeholderImage, placeholderImage],
+        "BrightCart is a simple yet polished e-commerce application built with React, designed to showcase the core concepts and skills gained through working with JavaScript frameworks. The application features a clean and intuitive user interface for searching products, managing a shopping cart, and completing purchases",
+      technologies: ["React", "JavaScript", "Vite", "Tailwind CSS"],
+      githubLink: "https://github.com/Iseost/online-store-assigment",
+      liveLink: "https://effortless-gumdrop-3a143f.netlify.app/",
+      images: [brightCartImage, brightCartImage1, brightCartImage2],
     },
     3: {
       id: 3,
@@ -70,10 +74,10 @@ export default function ProjectDetail() {
       category: "private",
       description:
         "A personal hobby project where I designed and built a wedding invitation website for my own wedding. This was a special personal project where I designed and developed a custom wedding invitation website. The site features interactive elements, RSVP functionality, and all the information guests needed for our wedding day.",
-      technologies: ["React", "JavaScript", "CSS", "Responsive Design"],
+      technologies: ["JavaScript", "Tailwind CSS"],
       githubLink: "https://github.com/yourusername/wedding-site",
       liveLink: "https://mortenogiselin.no",
-      images: [mortogise, placeholderImage, placeholderImage],
+      images: [mortogise, weddingLogo, weddingInfo],
     },
   };
 
@@ -89,12 +93,6 @@ export default function ProjectDetail() {
           <p className="text-[#6B5A4E] mb-8">
             The project you're looking for doesn't exist.
           </p>
-          <Link
-            to="/"
-            className="px-6 py-3 bg-[#7B513A] text-white font-semibold rounded-lg hover:bg-[#5A3A2A] transition-colors"
-          >
-            Back to Home
-          </Link>
         </div>
       </div>
     );
@@ -102,51 +100,14 @@ export default function ProjectDetail() {
 
   return (
     <div className="min-h-screen bg-[#FAF7F3]">
-      {/* Hero Image Section */}
-      <div className="bg-[#E8E0D5] py-12">
-        <div className="container mx-auto px-4">
-          <Link
-            to="/"
-            className="inline-flex items-center text-[#7B513A] hover:text-[#5A3A2A] transition-colors mb-6"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 mr-2"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fillRule="evenodd"
-                d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
-                clipRule="evenodd"
-              />
-            </svg>
-            Back to Projects
-          </Link>
-
-          <div className="bg-[#FAF7F3] rounded-2xl overflow-hidden max-w-4xl mx-auto aspect-video">
-            <img
-              src={project.image || placeholderImage}
-              alt={project.title}
-              className="w-full h-full object-cover"
-              onError={(e) => {
-                e.target.onerror = null;
-                e.target.src = placeholderImage;
-              }}
-            />
-          </div>
-        </div>
-      </div>
-
-      {/* Content Section Below Hero */}
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl md:text-4xl font-bold text-[#7B513A] mb-2">
+          <h1 className="text-3xl md:text-4xl font-bold text-[#7B513A] mb-2 mt-10">
             {project.title}
           </h1>
           <p className="text-lg text-[#6B5A4E] mb-8">{project.subtitle}</p>
 
-          <div className="grid md:grid-cols-2 gap-8 pb-8 border-b border-[#E8E0D5]">
+          <div className="grid md:grid-cols-2 gap-8 pb-8 pt-8 border-b-2 border-t-2 border-[#E8E0D5]">
             {/* Left Column */}
             <div>
               <h3 className="text-sm font-semibold text-[#7B513A] mb-3">

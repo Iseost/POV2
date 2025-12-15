@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import imageOfMe from "../assets/imageme.png";
 import placeholderImage from "../assets/image.png";
 import auctionHouseImage from "../assets/auctionHouse.png";
-import brightCartImage from "../assets/brightCart.png";
+import brightCartImage from "../assets/brightCart/brightCart.png";
 import mmfImage from "../assets/mmf.png";
-import mortogise from "../assets/mortogise.png";
+import mortogise from "../assets/mortenogiselin/mortogise.png";
 
 function ProjectCard({ id, title, image, description }) {
   const smallerSentence = (text) => {
