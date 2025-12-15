@@ -136,12 +136,13 @@ export default function HomePage() {
   }, []);
 
   const funFacts = [
-    "Tolkien ❤️",
-    "Coffee ☕",
-    "Music (metal) 🎸",
-    "Knitting, baking and lego 🧶🍰🧱",
-    "Orange cats 🐱",
-    "Team vans/converse 👟",
+    "If Tolkien is mentioned, I’m listening ❤️",
+    "Do not engage before morning coffee — my kids can confirm ☕",
+    "Metal music, because silence is suspicious 🎸",
+    "If I’m gaming, I’m probably saving Hyrule 🗡️",
+    "Knitting, baking & LEGO — my kind of therapy 🧶🍰🧱",
+    "Orange cats = main character energy 🐱",
+    "Vans or Converse, always 👟",
   ];
 
   const skills = [
@@ -266,11 +267,11 @@ export default function HomePage() {
               </p>
             </div>
             <div className="flex-1 flex justify-center">
-              <div className="bg-[#E7C098] rounded-3xl shadow-xl p-8 max-w-md w-full">
+              <div className="bg-[#E7C098] rounded-3xl shadow-xl p-8  w-full">
                 <h2 className="text-2xl font-bold text-white mb-6">
                   Fun Facts
                 </h2>
-                <ul className="space-y-3 text-white text-lg">
+                <ul className="space-y-6 text-white text-lg">
                   {funFacts.map((fact, index) => (
                     <li key={index} className="flex items-center gap-2">
                       <span className="w-2 h-2 bg-white rounded-full" />
@@ -282,7 +283,6 @@ export default function HomePage() {
             </div>
           </div>
         </div>{" "}
-        {/* Close wrapper */}
         {/* Skills */}
         <div className="mt-30">
           <h3 className="text-2xl font-bold text-center mb-8">
