@@ -1,13 +1,17 @@
 import { useParams, Link } from "react-router-dom";
 import placeholderImage from "../assets/image.png";
-import { auctionHouseImage } from "../assets/images";
+import {
+  auctionHouseImage,
+  auctionHouseImage1,
+  auctionHouseImage2,
+} from "../assets/images";
 import {
   brightCartImage,
   brightCartImage1,
   brightCartImage2,
 } from "../assets/images";
 import { mortogise, weddingLogo, weddingInfo } from "../assets/images";
-import { mmfImage } from "../assets/images";
+import { mmfImage, mmfImage1, mmfImage2 } from "../assets/images";
 
 export default function ProjectDetail() {
   const { id } = useParams();
@@ -21,11 +25,11 @@ export default function ProjectDetail() {
       subtitle: "Semester project 2",
       category: "school",
       description:
-        "A full-featured auction house platform built as a semester project. This application allows users to create auctions, place bids, and manage their listings in real-time. The Auction House project was developed as part of my second semester at Noroff. It showcases a complete e-commerce auction system where users can register, create listings, bid on items, and track their auction activity.",
-      technologies: ["React", "JavaScript", "Tailwind CSS", "API Integration"],
-      githubLink: "https://github.com/yourusername/auction-house",
-      liveLink: "https://auction-house-demo.netlify.app",
-      images: [auctionHouseImage, placeholderImage, placeholderImage],
+        "My first project exam of the second year in frontend development. For this project, I planned, designed, and built a fully functional auction website. I am very proud of this project, as I invested a lot of time and effort, and it reflects the skills and knowledge I had developed by this stage, including responsive design, interactive features, and polished styling. The project was both challenging and rewarding, allowing me to enhance my problem-solving abilities and gain confidence in my web development skills. It was a significant milestone in my learning journey, showcasing my growth as a frontend developer.",
+      technologies: ["JavaScript", "Tailwind CSS", "HTML", "API Integration"],
+      githubLink: "https://github.com/Iseost/Auction-House",
+      liveLink: "https://auctionhouse-sp2.netlify.app/",
+      images: [auctionHouseImage, auctionHouseImage1, auctionHouseImage2],
     },
     2: {
       id: 2,
@@ -35,7 +39,13 @@ export default function ProjectDetail() {
       category: "school",
       description:
         "BrightCart is a simple yet polished e-commerce application built with React, designed to showcase the core concepts and skills gained through working with JavaScript frameworks. The application features a clean and intuitive user interface for searching products, managing a shopping cart, and completing purchases",
-      technologies: ["React", "JavaScript", "Vite", "Tailwind CSS"],
+      technologies: [
+        "React",
+        "JavaScript",
+        "Vite",
+        "Tailwind CSS",
+        "API Integration",
+      ],
       githubLink: "https://github.com/Iseost/online-store-assigment",
       liveLink: "https://effortless-gumdrop-3a143f.netlify.app/",
       images: [brightCartImage, brightCartImage1, brightCartImage2],
@@ -48,7 +58,7 @@ export default function ProjectDetail() {
       category: "school",
       description:
         "A project exploring various CSS frameworks and modern styling approaches. This project was an exploration of different CSS frameworks including Bootstrap, Tailwind CSS, and CSS-in-JS solutions. The goal was to understand the strengths and use cases of each approach.",
-      technologies: ["HTML", "CSS", "Bootstrap", "Tailwind CSS", "Sass"],
+      technologies: ["HTML", "JavaScript", "Tailwind CSS"],
       githubLink: "https://github.com/yourusername/css-frameworks",
       liveLink: "https://css-frameworks-demo.netlify.app",
       images: [placeholderImage, placeholderImage, placeholderImage],
@@ -60,11 +70,11 @@ export default function ProjectDetail() {
       subtitle: "Collaborative team project",
       category: "school",
       description:
-        "A collaborative project with all Frontend Development students at Noroff. MMF (Musikk Forandrer Liv - Music Changes Lives) was a large-scale collaborative project involving all frontend development students. The project aimed to create a platform showcasing how music impacts lives and brings communities together.",
-      technologies: ["React", "JavaScript", "Tailwind CSS", "Git", "Figma"],
-      githubLink: "https://github.com/noroff/mmf",
-      liveLink: "https://mmf-project.netlify.app",
-      images: [mmfImage, placeholderImage, placeholderImage],
+        "This project was a collaborative effort between all Frontend Development students at Noroff. It’s an ongoing initiative that we participated in both during our first and second year of studies. Through this experience, we gained valuable insight into working with realistic clients, planning and executing projects, and collaborating effectively within a development team. I was part of the developer team both years, where I contributed to building and improving the frontend. We worked with a real-world workflow, including being assigned issues, creating and reviewing pull requests, and following version control best practices using Git and GitHub. The project was built using React, Tailwind CSS, and Decap CMS, with a focus on creating a responsive and user-friendly interface. This experience strengthened my understanding of component-based development, teamwork, and agile workflows — all essential skills for a professional frontend developer.",
+      technologies: ["JavaScript", "Tailwind CSS"],
+      githubLink: "https://github.com/NoroffFEU/musikkforandrerliv.no",
+      liveLink: "https://norofffeu.github.io/musikkforandrerliv.no/",
+      images: [mmfImage, mmfImage1, mmfImage2],
     },
     5: {
       id: 5,
@@ -73,9 +83,9 @@ export default function ProjectDetail() {
       subtitle: "The wedding invitation",
       category: "private",
       description:
-        "A personal hobby project where I designed and built a wedding invitation website for my own wedding. This was a special personal project where I designed and developed a custom wedding invitation website. The site features interactive elements, RSVP functionality, and all the information guests needed for our wedding day.",
+        "A personal hobby project where I designed and built a wedding invitation website with a custom domain. Instead of sending a traditional paper invitation, I wanted to create something more interactive and personal by applying my frontend skills to create a simple, elegant, and fully functional online invitation for friends and family.",
       technologies: ["JavaScript", "Tailwind CSS"],
-      githubLink: "https://github.com/yourusername/wedding-site",
+      githubLink: "https://github.com/Iseost/Morten-Iselin",
       liveLink: "https://mortenogiselin.no",
       images: [mortogise, weddingLogo, weddingInfo],
     },
