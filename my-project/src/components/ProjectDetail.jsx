@@ -203,22 +203,22 @@ export default function ProjectDetail() {
         <div className="max-w-4xl mx-auto">
           {/* Two images side by side */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            <div className="bg-[#E8E0D5] rounded-2xl overflow-hidden aspect-square">
+            <div className="rounded-2xl overflow-hidden aspect-square">
               <img
                 src={project.images[0] || placeholderImage}
                 alt={`${project.title} screenshot 1`}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
                 onError={(e) => {
                   e.target.onerror = null;
                   e.target.src = placeholderImage;
                 }}
               />
             </div>
-            <div className="bg-[#E8E0D5] rounded-2xl overflow-hidden aspect-square">
+            <div className="rounded-2xl overflow-hidden aspect-square">
               <img
                 src={project.images[1] || placeholderImage}
                 alt={`${project.title} screenshot 2`}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
                 onError={(e) => {
                   e.target.onerror = null;
                   e.target.src = placeholderImage;
@@ -228,11 +228,11 @@ export default function ProjectDetail() {
           </div>
 
           {/* One large image below */}
-          <div className="bg-[#E8E0D5] rounded-2xl overflow-hidden aspect-video">
+          <div className="rounded-2xl overflow-hidden aspect-video">
             <img
               src={project.images[2] || placeholderImage}
               alt={`${project.title} screenshot 3`}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
               onError={(e) => {
                 e.target.onerror = null;
                 e.target.src = placeholderImage;
