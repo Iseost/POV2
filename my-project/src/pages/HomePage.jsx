@@ -243,12 +243,6 @@ export default function HomePage() {
         ref={aboutRef}
         id="about"
         className="mx-auto px-4 py-20 bg-[#F3EADF] rounded-xl shadow-md"
-        style={{
-          WebkitMaskImage:
-            "radial-gradient(ellipse at center, black 60%, transparent 100%)",
-          maskImage:
-            "radial-gradient(ellipse at center, black 60%, transparent 100%)",
-        }}
       >
         <div className="max-w-6xl mx-auto">
           {" "}
