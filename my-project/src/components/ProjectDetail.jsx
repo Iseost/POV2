@@ -30,38 +30,6 @@ export default function ProjectDetail() {
   const projects = {
     1: {
       id: 1,
-      title: "Auction House",
-      image: auctionHouseImage,
-      subtitle: "Semester project 2",
-      category: "school",
-      description:
-        "My first project exam of the second year in frontend development. For this project, I planned, designed, and built a fully functional auction website. I am very proud of this project, as I invested a lot of time and effort, and it reflects the skills and knowledge I had developed by this stage, including responsive design, interactive features, and polished styling. The project was both challenging and rewarding, allowing me to enhance my problem-solving abilities and gain confidence in my web development skills. It was a significant milestone in my learning journey, showcasing my growth as a frontend developer.",
-      technologies: ["JavaScript", "Tailwind CSS", "HTML", "API Integration"],
-      githubLink: "https://github.com/Iseost/Auction-House",
-      liveLink: "https://auctionhouse-sp2.netlify.app/",
-      images: [auctionHouseImage, auctionHouseImage1, auctionHouseImage2],
-    },
-    2: {
-      id: 2,
-      title: "BrightCart",
-      image: brightCartImage,
-      subtitle: "JavaScript Frameworks Course",
-      category: "school",
-      description:
-        "BrightCart is a simple yet polished e-commerce application built with React, designed to showcase the core concepts and skills gained through working with JavaScript frameworks. The application features a clean and intuitive user interface for searching products, managing a shopping cart, and completing purchases",
-      technologies: [
-        "React",
-        "JavaScript",
-        "Vite",
-        "Tailwind CSS",
-        "API Integration",
-      ],
-      githubLink: "https://github.com/Iseost/online-store-assigment",
-      liveLink: "https://effortless-gumdrop-3a143f.netlify.app/",
-      images: [brightCartImage, brightCartImage1, brightCartImage2],
-    },
-    3: {
-      id: 3,
       title: "Holidaze",
       image: holidazeImage,
       subtitle: "Project Exam 2",
@@ -80,6 +48,39 @@ export default function ProjectDetail() {
       liveLink: "https://holidaze-flame.vercel.app/",
       images: [holidazeImage, holidazeImage2, holidazeImage3],
     },
+    2: {
+      id: 2,
+      title: "Auction House",
+      image: auctionHouseImage,
+      subtitle: "Semester project 2",
+      category: "school",
+      description:
+        "My first project exam of the second year in frontend development. For this project, I planned, designed, and built a fully functional auction website. I am very proud of this project, as I invested a lot of time and effort, and it reflects the skills and knowledge I had developed by this stage, including responsive design, interactive features, and polished styling. The project was both challenging and rewarding, allowing me to enhance my problem-solving abilities and gain confidence in my web development skills. It was a significant milestone in my learning journey, showcasing my growth as a frontend developer.",
+      technologies: ["JavaScript", "Tailwind CSS", "HTML", "API Integration"],
+      githubLink: "https://github.com/Iseost/Auction-House",
+      liveLink: "https://auctionhouse-sp2.netlify.app/",
+      images: [auctionHouseImage, auctionHouseImage1, auctionHouseImage2],
+    },
+    3: {
+      id: 3,
+      title: "BrightCart",
+      image: brightCartImage,
+      subtitle: "JavaScript Frameworks Course",
+      category: "school",
+      description:
+        "BrightCart is a simple yet polished e-commerce application built with React, designed to showcase the core concepts and skills gained through working with JavaScript frameworks. The application features a clean and intuitive user interface for searching products, managing a shopping cart, and completing purchases",
+      technologies: [
+        "React",
+        "JavaScript",
+        "Vite",
+        "Tailwind CSS",
+        "API Integration",
+      ],
+      githubLink: "https://github.com/Iseost/online-store-assigment",
+      liveLink: "https://effortless-gumdrop-3a143f.netlify.app/",
+      images: [brightCartImage, brightCartImage1, brightCartImage2],
+    },
+
     4: {
       id: 4,
       title: "MMF - musikkforandrerliv",
