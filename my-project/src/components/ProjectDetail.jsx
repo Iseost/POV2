@@ -133,7 +133,8 @@ export default function ProjectDetail() {
           <h1 className="text-3xl md:text-4xl font-bold text-[#7B513A] mb-2 mt-10">
             {project.title}
           </h1>
-          <p className="text-lg text-[#6B5A4E] mb-8">{project.subtitle}</p>
+
+          <h2 className="text-lg text-[#6B5A4E] mb-8">{project.subtitle}</h2>
 
           <div className="grid md:grid-cols-2 gap-8 pb-8 pt-8 border-b-2 border-t-2 border-[#E8E0D5]">
             {/* Left Column */}
@@ -217,11 +218,11 @@ export default function ProjectDetail() {
       </div>
 
       {/* Image Gallery Section */}
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* Two images side by side */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            <div className="rounded-2xl overflow-hidden aspect-square">
+            <div className="rounded-2xl overflow-hidden ">
               <img
                 src={project.images[0] || placeholderImage}
                 alt={`${project.title} screenshot 1`}
@@ -232,7 +233,7 @@ export default function ProjectDetail() {
                 }}
               />
             </div>
-            <div className="rounded-2xl overflow-hidden aspect-square">
+            <div className="rounded-2xl overflow-hidden">
               <img
                 src={project.images[1] || placeholderImage}
                 alt={`${project.title} screenshot 2`}
@@ -246,7 +247,7 @@ export default function ProjectDetail() {
           </div>
 
           {/* One large image below */}
-          <div className="rounded-2xl overflow-hidden aspect-video">
+          <div className="rounded-2xl overflow-hidden">
             <img
               src={project.images[2] || placeholderImage}
               alt={`${project.title} screenshot 3`}
