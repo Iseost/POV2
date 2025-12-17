@@ -84,26 +84,29 @@ export default function HomePage() {
   const projects = [
     {
       id: 1,
-      title: "Auction House",
-      image: auctionHouseImage || placeholderImage,
-      description: "Semester project 2",
+      title: "Holidaze",
+      image: holidazeImage || placeholderImage,
+      description:
+        "Project Exam 2 - A Airbnb inspired booking platform made with React, for my final exam at Noroff.",
       category: "school",
     },
     {
       id: 2,
-      title: "BrightCart",
-      image: brightCartImage || placeholderImage,
-      description: "Assignment for JavaScript frameworks course.",
+      title: "Auction House",
+      image: auctionHouseImage || placeholderImage,
+      description:
+        "Semester project 2 - A auction application made with JavaScript and Tailwind CSS for my second semester project at Noroff. ",
       category: "school",
     },
     {
       id: 3,
-      title: "Holidaze",
-      image: holidazeImage || placeholderImage,
+      title: "BrightCart",
+      image: brightCartImage || placeholderImage,
       description:
-        "Project Exam 2 - A Airbnb inspired booking platform made for my final exam at Noroff.",
+        "Assignment for JavaScript frameworks course. An e-commerce website built with React and Tailwind CSS.",
       category: "school",
     },
+
     {
       id: 4,
       title: "MMF - musikkforandrerliv",
