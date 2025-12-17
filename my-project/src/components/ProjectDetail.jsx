@@ -12,6 +12,11 @@ import {
 } from "../assets/images";
 import { mortogise, weddingLogo, weddingInfo } from "../assets/images";
 import { mmfImage, mmfImage1, mmfImage2 } from "../assets/images";
+import {
+  holidazeImage,
+  holidazeImage2,
+  holidazeImage3,
+} from "../assets/images";
 import { useEffect } from "react";
 
 export default function ProjectDetail() {
@@ -57,16 +62,23 @@ export default function ProjectDetail() {
     },
     3: {
       id: 3,
-      title: "CSS Frameworks",
-      image: placeholderImage,
-      subtitle: "Framework exploration project",
+      title: "Holidaze",
+      image: holidazeImage,
+      subtitle: "Project Exam 2",
       category: "school",
       description:
-        "A project exploring various CSS frameworks and modern styling approaches. This project was an exploration of different CSS frameworks including Bootstrap, Tailwind CSS, and CSS-in-JS solutions. The goal was to understand the strengths and use cases of each approach.",
-      technologies: ["HTML", "JavaScript", "Tailwind CSS"],
-      githubLink: "https://github.com/yourusername/css-frameworks",
-      liveLink: "https://css-frameworks-demo.netlify.app",
-      images: [placeholderImage, placeholderImage, placeholderImage],
+        "My second and last project exam. Holidaze is a accommodation bookings site where you can browse venues, book venues and manage venus. All users has the abilities to search for venues, view venue details, view a calender of available dates and register an account as customer or venue manager. As a costumer you can book venyes, view upcoming bookings and update your profile. As a venue manager you can create, edit and delete venues, view upcoming bookings for the venues they manage, and update their profile. The project was built using React for the frontend, with Tailwind CSS for styling and Vite as the build tool. This project exam allowed me to demonstrate my ability to create a full-featured web application, showcasing my skills in frontend development, API integration, and responsive design. It was a fun and challenging project were I learned a lot along the way.",
+      technologies: [
+        "React",
+        "Tailwind CSS",
+        "Vite",
+        "API Integration",
+        "Prettier",
+        "ESLint",
+      ],
+      githubLink: "https://github.com/Iseost/Holidaze?tab=readme-ov-file",
+      liveLink: "https://holidaze-flame.vercel.app/",
+      images: [holidazeImage, holidazeImage2, holidazeImage3],
     },
     4: {
       id: 4,

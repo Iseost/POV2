@@ -23,3 +23,8 @@ export { default as mmfImage } from "./mmf/mmf.png";
 export { default as mmfImage1 } from "./mmf/mmfPrivate.png";
 export { default as mmfImage2 } from "./mmf/mmfAbout.png";
 
+//Holidaze images
+export { default as holidazeImage } from "./holidaze/holidazeHome.png";
+export { default as holidazeImage2 } from "./holidaze/holidazeProfile.png";
+export { default as holidazeImage3 } from "./holidaze/holidazeCard.png";
+

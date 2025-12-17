@@ -6,6 +6,7 @@ import { auctionHouseImage } from "../assets/images";
 import { brightCartImage } from "../assets/images";
 import { mmfImage } from "../assets/images";
 import { mortogise } from "../assets/images";
+import { holidazeImage } from "../assets/images";
 
 function ProjectCard({ id, title, image, description }) {
   const navigate = useNavigate();
@@ -97,9 +98,10 @@ export default function HomePage() {
     },
     {
       id: 3,
-      title: "CSS frameworks",
-      image: placeholderImage,
-      description: "This is a description of project three.",
+      title: "Holidaze",
+      image: holidazeImage || placeholderImage,
+      description:
+        "Project Exam 2 - A Airbnb inspired booking platform made for my final exam at Noroff.",
       category: "school",
     },
     {
