@@ -166,15 +166,15 @@ export default function HomePage() {
   return (
     <div className="bg-[#FAF7F3] text-[#3A2A20]">
       {/* Hero Section */}
-      <div className="min-h-screen bg-linear-to-b from-[#7B513A] to-[#E7C098] flex items-center relative overflow-hidden">
+      <div className="min-h-screen flex items-start pt-24 md:items-center md:pt-0 relative overflow-hidden bg-linear-to-b from-[#7B513A] to-[#E7C098]">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 px-4">
           <div className="flex-1 max-w-xl animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
-              Crafting Experiences, One Line at a Time.
+              Eat, sleep, code, repeat.
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-6">
-              Daytime coder, nighttime problem solver, always chasing cleaner
-              UI.
+              I build websites with clean code, thoughtful design, and a lot of
+              coffee.
             </p>
           </div>
 
